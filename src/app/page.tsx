@@ -1,6 +1,7 @@
 import Capabilities from "../components/Capabilities/Capabilities";
 import Contact from "../components/Contact/Contact";
 import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
+import Footer from "../components/Footer/Footer";
 import Founder from "../components/Founder/Founder";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
@@ -19,6 +20,8 @@ export default function Home() {
         <Founder />
         <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
