@@ -13,9 +13,34 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Casteris",
+  metadataBase: new URL(
+    "https:" + "//" + ["www", "casteris", "com"].join("."),
+  ),
+  title: "Casteris | Comprender. Construir. Liderar.",
   description:
-    "Casteris es una plataforma de conocimiento, construcción y consultoría tecnológica.",
+    "Conocimiento, construcción y consultoría tecnológica para profesionales y organizaciones que buscan comprender mejor la tecnología y construir soluciones con criterio.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    url: "/",
+    siteName: "Casteris",
+    title: "Casteris | Comprender. Construir. Liderar.",
+    description:
+      "Conocimiento, construcción y consultoría tecnológica para profesionales y organizaciones que buscan comprender mejor la tecnología y construir soluciones con criterio.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Casteris | Comprender. Construir. Liderar.",
+    description:
+      "Conocimiento, construcción y consultoría tecnológica para profesionales y organizaciones que buscan comprender mejor la tecnología y construir soluciones con criterio.",
+  },
 };
 
 export default function RootLayout({
