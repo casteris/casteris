@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
+import ValueProposition from "../components/ValueProposition/ValueProposition";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <ValueProposition />
       </main>
     </>
   );
