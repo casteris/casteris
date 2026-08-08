@@ -1,0 +1,20 @@
+:root {
+  /* Brand colors */
+  --color-primary: #5b3fd6;
+  --color-secondary: #14b8c4;
+  --color-accent: #f5a524;
+
+  /* Neutral colors */
+  --color-white: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-neutral: #94a3b8;
+  --color-graphite: #1e293b;
+  --color-black: #0f172a;
+
+  /* Functional colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-information: #3b82f6;
+}
