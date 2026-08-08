@@ -1,0 +1,122 @@
+.contact {
+  background: var(--color-primary);
+  scroll-margin-top: 4.5rem;
+}
+
+.contact__container {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.contact__eyebrow {
+  margin: 0 0 2rem;
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: 6rem;
+  align-items: end;
+}
+
+.contact__title {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.contact__action {
+  max-width: 30rem;
+}
+
+.contact__description {
+  margin: 0 0 2rem;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-primary);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.contact__button:hover {
+  color: var(--color-white);
+  background: transparent;
+}
+
+.contact__email {
+  display: block;
+  width: fit-content;
+  margin-top: 1.5rem;
+  color: var(--color-white);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25rem;
+}
+
+.contact__button:focus-visible,
+.contact__email:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 48rem) {
+  .contact {
+    scroll-margin-top: 4rem;
+  }
+
+  .contact__container {
+    padding: 5rem 0;
+  }
+
+  .contact__eyebrow {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact__title {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .contact__description {
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact__button {
+    transition: none;
+  }
+}

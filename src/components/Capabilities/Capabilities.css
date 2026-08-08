@@ -1,0 +1,113 @@
+.capabilities {
+  background: var(--color-white);
+  scroll-margin-top: 4.5rem;
+}
+
+.capabilities__container {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.capabilities__introduction {
+  max-width: 48rem;
+}
+
+.capabilities__eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.capabilities__title {
+  max-width: 16ch;
+  margin: 0;
+  color: var(--color-black);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.capabilities__description {
+  max-width: 42rem;
+  margin: 1.75rem 0 0;
+  color: var(--color-graphite);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.capabilities__list {
+  margin-top: 5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.capabilities__item {
+  display: grid;
+  grid-template-columns: 4rem minmax(10rem, 0.75fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.capabilities__number {
+  color: var(--color-neutral);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.capabilities__item-title {
+  margin: 0;
+  color: var(--color-black);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.capabilities__item-description {
+  max-width: 38rem;
+  margin: 0;
+  color: var(--color-graphite);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 48rem) {
+  .capabilities {
+    scroll-margin-top: 4rem;
+  }
+
+  .capabilities__container {
+    padding: 5rem 0;
+  }
+
+  .capabilities__title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .capabilities__description {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .capabilities__list {
+    margin-top: 3.5rem;
+  }
+
+  .capabilities__item {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+    padding: 1.75rem 0;
+  }
+
+  .capabilities__item-description {
+    margin-top: 0.25rem;
+  }
+}
