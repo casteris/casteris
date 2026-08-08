@@ -1,4 +1,5 @@
 import Capabilities from "../components/Capabilities/Capabilities";
+import Contact from "../components/Contact/Contact";
 import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Founder from "../components/Founder/Founder";
 import Header from "../components/Header/Header";
@@ -16,6 +17,7 @@ export default function Home() {
         <Capabilities />
         <FeaturedProjects />
         <Founder />
+        <Contact />
       </main>
     </>
   );
