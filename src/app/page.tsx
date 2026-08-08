@@ -1,3 +1,4 @@
+import Capabilities from "../components/Capabilities/Capabilities";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import ValueProposition from "../components/ValueProposition/ValueProposition";
@@ -10,6 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <ValueProposition />
+        <Capabilities />
       </main>
     </>
   );
