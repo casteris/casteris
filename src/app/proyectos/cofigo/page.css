@@ -43,6 +43,24 @@
   line-height: 1.7;
 }
 
+.cofigo-page__visual {
+  margin-top: 3rem;
+  padding: 1.25rem;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.cofigo-page__visual--section {
+  margin-top: 2.5rem;
+}
+
+.cofigo-page__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .cofigo-page__section {
   border-top: 1px solid var(--color-border);
 }
@@ -55,6 +73,7 @@
 }
 
 .cofigo-page__section-content {
+  width: 100%;
   max-width: 48rem;
 }
 
@@ -138,6 +157,15 @@
 @media (max-width: 48rem) {
   .cofigo-page__hero {
     padding: 4.5rem 0;
+  }
+
+  .cofigo-page__visual {
+    margin-top: 2.5rem;
+    padding: 0.75rem;
+  }
+
+  .cofigo-page__visual--section {
+    margin-top: 2rem;
   }
 
   .cofigo-page__section-grid {
