@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import "./page.css";
@@ -9,6 +10,7 @@ const projects = [
     description:
       "Plataforma digital para simplificar la gestión de citas y la interacción entre pacientes, médicos y clínicas.",
     disciplines: "Producto digital · Arquitectura · Desarrollo",
+    href: "/proyectos/agendoc",
   },
   {
     number: "02",
@@ -16,6 +18,7 @@ const projects = [
     description:
       "Experiencia digital para simplificar los pedidos y la recogida de alimentos en cafeterías universitarias.",
     disciplines: "Producto digital · Full stack · Operación",
+    href: null,
   },
 ];
 
@@ -64,6 +67,14 @@ export default function ProjectsPage() {
                   <p className="projects-page__project-disciplines">
                     {project.disciplines}
                   </p>
+                  {project.href && (
+                    <Link
+                      className="projects-page__project-link"
+                      href={project.href}
+                    >
+                      Ver proyecto →
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

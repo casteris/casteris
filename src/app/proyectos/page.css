@@ -90,6 +90,24 @@
   line-height: 1.6;
 }
 
+.projects-page__project-link {
+  display: inline-block;
+  margin-top: 1.75rem;
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.projects-page__project-link:hover {
+  color: var(--color-primary);
+}
+
+.projects-page__project-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
 @media (max-width: 48rem) {
   .projects-page__intro {
     padding: 4.5rem 0 4rem;
