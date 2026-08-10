@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -21,6 +22,8 @@ const projects = [
       "Plataforma digital para simplificar la gestión de citas y la interacción entre pacientes, médicos y clínicas.",
     disciplines: "Producto digital · Arquitectura · Desarrollo",
     href: "/proyectos/agendoc",
+    image: "/projects/agendoc-reception.png",
+    imageAlt: "Recepción Digital de AgenDoc para reservar una cita médica",
   },
   {
     number: "02",
@@ -29,6 +32,9 @@ const projects = [
       "Experiencia digital para simplificar los pedidos y la recogida de alimentos en cafeterías universitarias.",
     disciplines: "Producto digital · Full stack · Operación",
     href: "/proyectos/cofigo",
+    image: "/projects/cofigo-menu.png",
+    imageAlt:
+      "Menú de CofiGO con catálogo de productos, horarios de recojo y carrito",
   },
 ];
 
@@ -69,6 +75,17 @@ export default function ProjectsPage() {
                   <h2 className="projects-page__project-title">
                     {project.name}
                   </h2>
+
+                  <div className="projects-page__project-visual">
+                    <Image
+                      className="projects-page__project-image"
+                      src={project.image}
+                      alt={project.imageAlt}
+                      width={1173}
+                      height={620}
+                      sizes="(max-width: 48rem) 100vw, 60rem"
+                    />
+                  </div>
 
                   <p className="projects-page__project-description">
                     {project.description}
