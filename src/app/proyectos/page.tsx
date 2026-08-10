@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import "./page.css";
+
+export const metadata: Metadata = {
+  title: "Proyectos | Casteris",
+  description:
+    "Portafolio de productos digitales construidos por Casteris a partir de problemas concretos, decisiones de diseño, arquitectura y desarrollo iterativo.",
+  alternates: {
+    canonical: "/proyectos",
+  },
+};
 
 const projects = [
   {
