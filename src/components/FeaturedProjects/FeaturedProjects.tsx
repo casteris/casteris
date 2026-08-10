@@ -1,13 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
 import "./FeaturedProjects.css";
 
-const projects = [
+type Project = {
+  number: string;
+  name: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+};
+
+const projects: Project[] = [
   {
     number: "01",
     name: "AgenDoc",
     description:
       "Plataforma para la gestión de citas médicas que explora la construcción de un producto digital completo, desde la experiencia del paciente hasta la operación médica y administrativa.",
     href: "/proyectos/agendoc",
+    image: "/projects/agendoc-reception.png",
+    imageAlt: "Recepción Digital de AgenDoc para reservar una cita médica",
   },
   {
     number: "02",
@@ -15,6 +27,8 @@ const projects = [
     description:
       "Plataforma de pedidos para cafeterías universitarias orientada a simplificar la compra, reducir tiempos de espera y conectar la experiencia del estudiante con la operación de la cafetería.",
     href: "/proyectos/cofigo",
+    image: "/projects/cofigo-menu.png",
+    imageAlt: "Menú de CofiGO con catálogo de productos, horarios de recojo y carrito",
   },
 ];
 
@@ -59,6 +73,19 @@ export default function FeaturedProjects() {
               <h3 className="featured-projects__project-name">
                 {project.name}
               </h3>
+
+              {project.image && (
+                <div className="featured-projects__visual">
+                  <Image
+                    className="featured-projects__image"
+                    src={project.image}
+                    alt={project.imageAlt ?? ""}
+                    width={1173}
+                    height={620}
+                    sizes="(max-width: 48rem) 100vw, 50vw"
+                  />
+                </div>
+              )}
 
               <p className="featured-projects__project-description">
                 {project.description}
