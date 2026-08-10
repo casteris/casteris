@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./page.css";
+
+export const metadata: Metadata = {
+  title: "CofiGO | Proyectos Casteris",
+  description:
+    "Caso de producto digital de Casteris para pedidos en cafeterías universitarias, conectando experiencia de usuario, operación y desarrollo full stack.",
+  alternates: {
+    canonical: "/proyectos/cofigo",
+  },
+};
 
 const capabilities = [
   "Registro y autenticación",

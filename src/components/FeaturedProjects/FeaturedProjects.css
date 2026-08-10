@@ -81,6 +81,40 @@
   line-height: 1.65;
 }
 
+.featured-projects__project-link {
+  display: inline-block;
+  margin-top: 1.75rem;
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.featured-projects__project-link:hover {
+  color: var(--color-primary);
+}
+
+.featured-projects__project-link:focus-visible,
+.featured-projects__portfolio-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+.featured-projects__portfolio-link-wrapper {
+  margin-top: 2.5rem;
+}
+
+.featured-projects__portfolio-link {
+  display: inline-block;
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.featured-projects__portfolio-link:hover {
+  color: var(--color-primary);
+}
+
 @media (max-width: 48rem) {
   .featured-projects {
     scroll-margin-top: 4rem;

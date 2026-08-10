@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
 import "./page.css";
+
+export const metadata: Metadata = {
+  title: "AgenDoc | Proyectos Casteris",
+  description:
+    "Caso de producto digital de Casteris para la gestión de citas médicas, desde la experiencia del paciente hasta la arquitectura y evolución del producto.",
+  alternates: {
+    canonical: "/proyectos/agendoc",
+  },
+};
 
 const capabilities = [
   "Recepción digital para una primera cita",
