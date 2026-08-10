@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
@@ -50,6 +51,18 @@ export default function AgenDocProjectPage() {
               médicos y clínicas mediante una experiencia digital progresiva y
               una arquitectura preparada para evolucionar.
             </p>
+
+            <div className="agendoc-page__hero-visual">
+              <Image
+                className="agendoc-page__hero-image"
+                src="/projects/agendoc-reception.png"
+                alt="Recepción Digital de AgenDoc para reservar una cita médica"
+                width={1173}
+                height={620}
+                sizes="(max-width: 48rem) 100vw, 72rem"
+                priority
+              />
+            </div>
           </div>
         </section>
 
@@ -106,6 +119,17 @@ export default function AgenDocProjectPage() {
                   <li key={capability}>{capability}</li>
                 ))}
               </ul>
+
+              <div className="agendoc-page__section-visual">
+                <Image
+                  className="agendoc-page__section-image"
+                  src="/projects/agendoc-schedule.png"
+                  alt="Flujo de AgenDoc para seleccionar fecha y horario de una cita médica"
+                  width={1116}
+                  height={710}
+                  sizes="(max-width: 48rem) 100vw, 48rem"
+                />
+              </div>
             </div>
           </div>
         </section>

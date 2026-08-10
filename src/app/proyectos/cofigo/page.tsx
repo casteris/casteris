@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "../../../components/Footer/Footer";
 import Header from "../../../components/Header/Header";
@@ -53,6 +54,18 @@ export default function CofiGOProjectPage() {
               una experiencia digital que organiza pedidos, tiempos de recojo y
               operación alrededor de una necesidad cotidiana.
             </p>
+
+            <div className="cofigo-page__visual">
+              <Image
+                className="cofigo-page__image"
+                src="/projects/cofigo-menu.png"
+                alt="Menú digital de CofiGO con productos, categorías, horarios de recojo y carrito de compra"
+                width={1412}
+                height={744}
+                sizes="(max-width: 48rem) calc(100vw - 2rem), 72rem"
+                priority
+              />
+            </div>
           </div>
         </section>
 
@@ -152,6 +165,17 @@ export default function CofiGOProjectPage() {
                   Mantener despliegues independientes para frontend y backend.
                 </li>
               </ul>
+
+              <div className="cofigo-page__visual cofigo-page__visual--section">
+                <Image
+                  className="cofigo-page__image"
+                  src="/projects/cofigo-admin.png"
+                  alt="Panel administrador de CofiGO para la gestión de productos y operación de la cafetería"
+                  width={1401}
+                  height={742}
+                  sizes="(max-width: 48rem) calc(100vw - 2rem), 48rem"
+                />
+              </div>
             </div>
           </div>
         </section>
