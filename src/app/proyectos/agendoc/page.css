@@ -1,0 +1,153 @@
+.agendoc-page {
+  background: var(--color-white);
+}
+
+.agendoc-page__container {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+}
+
+.agendoc-page__hero {
+  padding: 7rem 0;
+}
+
+.agendoc-page__hero-content {
+  max-width: 72rem;
+}
+
+.agendoc-page__eyebrow,
+.agendoc-page__section-label {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.agendoc-page__title {
+  max-width: 58rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-black);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.agendoc-page__lead {
+  max-width: 46rem;
+  margin: 2rem 0 0;
+  color: var(--color-graphite);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.7;
+}
+
+.agendoc-page__section {
+  border-top: 1px solid var(--color-border);
+}
+
+.agendoc-page__section-grid {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 4rem;
+  padding: 5rem 0;
+}
+
+.agendoc-page__section-content {
+  max-width: 48rem;
+}
+
+.agendoc-page__section-content h2 {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--color-black);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.agendoc-page__section-content p {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-graphite);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.agendoc-page__capabilities,
+.agendoc-page__decisions {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agendoc-page__capabilities li,
+.agendoc-page__decisions li {
+  padding: 1rem 0;
+  color: var(--color-graphite);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--color-border);
+}
+
+.agendoc-page__capabilities li:last-child,
+.agendoc-page__decisions li:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agendoc-page__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.agendoc-page__technologies span {
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.agendoc-page__return {
+  border-top: 1px solid var(--color-border);
+}
+
+.agendoc-page__return .agendoc-page__container {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.agendoc-page__return-link {
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.agendoc-page__return-link:hover {
+  color: var(--color-primary);
+}
+
+.agendoc-page__return-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 48rem) {
+  .agendoc-page__hero {
+    padding: 4.5rem 0;
+  }
+
+  .agendoc-page__section-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3.5rem 0;
+  }
+
+  .agendoc-page__return .agendoc-page__container {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}
