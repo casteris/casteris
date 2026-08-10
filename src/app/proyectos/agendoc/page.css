@@ -43,6 +43,20 @@
   line-height: 1.7;
 }
 
+.agendoc-page__hero-visual {
+  margin-top: 4rem;
+  padding: 1.25rem;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.agendoc-page__hero-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
 .agendoc-page__section {
   border-top: 1px solid var(--color-border);
 }
@@ -96,6 +110,21 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.agendoc-page__section-visual {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.agendoc-page__section-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+}
+
 .agendoc-page__technologies {
   display: flex;
   flex-wrap: wrap;
@@ -140,10 +169,20 @@
     padding: 4.5rem 0;
   }
 
+  .agendoc-page__hero-visual {
+    margin-top: 3rem;
+    padding: 0.75rem;
+  }
+
   .agendoc-page__section-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 3.5rem 0;
+  }
+
+  .agendoc-page__section-visual {
+    margin-top: 2rem;
+    padding: 0.75rem;
   }
 
   .agendoc-page__return .agendoc-page__container {

@@ -1,35 +1,50 @@
+import CapabilityIcon, {
+  type CapabilityIconType,
+} from "./CapabilityIcon";
 import "./Capabilities.css";
 
-const capabilities = [
+type Capability = {
+  number: string;
+  title: string;
+  description: string;
+  icon: CapabilityIconType;
+};
+
+const capabilities: Capability[] = [
   {
     number: "01",
     title: "Comprender",
     description:
       "Analizar tecnología, negocio y contexto para convertir complejidad en decisiones más claras.",
+    icon: "understand",
   },
   {
     number: "02",
     title: "Diseñar",
     description:
       "Transformar necesidades y oportunidades en soluciones estructuradas, viables y alineadas con su propósito.",
+    icon: "design",
   },
   {
     number: "03",
     title: "Construir",
     description:
       "Llevar ideas a soluciones reales mediante tecnología, experimentación y desarrollo práctico.",
+    icon: "build",
   },
   {
     number: "04",
     title: "Liderar",
     description:
       "Conducir iniciativas, equipos y decisiones tecnológicas con equilibrio entre ejecución, calidad y resultados.",
+    icon: "lead",
   },
   {
     number: "05",
     title: "Compartir",
     description:
       "Convertir experiencia y aprendizaje en conocimiento útil que otras personas puedan comprender y aplicar.",
+    icon: "share",
   },
 ];
 
@@ -62,9 +77,15 @@ export default function Capabilities() {
                 {capability.number}
               </span>
 
-              <h3 className="capabilities__item-title">
-                {capability.title}
-              </h3>
+              <div className="capabilities__identity">
+                <div className="capabilities__icon-wrapper">
+                  <CapabilityIcon type={capability.icon} />
+                </div>
+
+                <h3 className="capabilities__item-title">
+                  {capability.title}
+                </h3>
+              </div>
 
               <p className="capabilities__item-description">
                 {capability.description}
