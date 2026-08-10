@@ -18,7 +18,7 @@ const projects = [
     description:
       "Experiencia digital para simplificar los pedidos y la recogida de alimentos en cafeterías universitarias.",
     disciplines: "Producto digital · Full stack · Operación",
-    href: null,
+    href: "/proyectos/cofigo",
   },
 ];
 
