@@ -14,6 +14,12 @@
   --color-graphite: #1e293b;
   --color-black: #0f172a;
 
+  /* Casteris digital experience */
+  --color-deep: #080b16;
+  --color-deep-surface: #0d1221;
+  --color-deep-border: #20283a;
+  --color-deep-muted: #a7b0c0;
+
   /* Functional colors */
   --color-success: #22c55e;
   --color-warning: #f59e0b;

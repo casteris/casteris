@@ -1,71 +1,155 @@
 .value-proposition {
-  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+  background: var(--color-deep);
 }
 
 .value-proposition__container {
+  position: relative;
+  z-index: 1;
   width: min(100% - 2rem, 72rem);
   margin: 0 auto;
-  padding: 7rem 0;
+  padding: 7rem 0 8rem;
 }
 
 .value-proposition__introduction {
-  max-width: 48rem;
+  max-width: 50rem;
+}
+
+.value-proposition__eyebrow {
+  margin: 0 0 1.5rem;
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .value-proposition__title {
-  max-width: 18ch;
+  max-width: 16ch;
   margin: 0;
-  color: var(--color-black);
-  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  color: var(--color-white);
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem);
   font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .value-proposition__description {
   max-width: 42rem;
-  margin: 1.75rem 0 0;
-  color: var(--color-graphite);
+  margin: 2rem 0 0;
+  color: var(--color-deep-muted);
   font-size: 1.125rem;
   line-height: 1.7;
 }
 
-.value-proposition__principles {
+.value-proposition__journey {
+  position: relative;
+  margin-top: 5.5rem;
+  padding-right: min(30vw, 22rem);
+}
+
+.value-proposition__ideas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin-top: 5rem;
+}
+
+.value-proposition__idea {
+  min-height: 13.625rem;
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+}
+
+.value-proposition__number {
+  padding-top: 0.45rem;
+  color: var(--color-deep-muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8125rem;
+  opacity: 0.55;
+}
+
+.value-proposition__idea-title {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .value-proposition__principle {
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.value-proposition__principle-title {
-  margin: 0;
+  margin: 0.875rem 0 0;
   color: var(--color-primary);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
-.value-proposition__principle-description {
-  margin: 1rem 0 0;
-  color: var(--color-graphite);
+.value-proposition__idea-description {
+  max-width: 35rem;
+  margin: 0.875rem 0 0;
+  color: var(--color-deep-muted);
   font-size: 1rem;
   line-height: 1.65;
 }
 
+.value-proposition-visual {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: max(1rem, calc((100vw - 72rem) / 2));
+  bottom: 0;
+  width: min(28vw, 20rem);
+  pointer-events: none;
+}
+
+.value-proposition-visual__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.value-proposition-visual__path--continuation {
+  opacity: 0.32;
+}
+
+.value-proposition-visual__path--entry {
+  opacity: 0.24;
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .value-proposition {
+    margin-top: -8rem;
+  }
+
+  .value-proposition__container {
+    padding: 6rem 0 7rem;
+  }
+
+  .value-proposition__journey {
+    margin-top: 5.5rem;
+    padding-right: min(28vw, 15rem);
+  }
+
+  .value-proposition-visual {
+    right: 1rem;
+    width: min(26vw, 14rem);
+  }
+}
+
 @media (max-width: 48rem) {
   .value-proposition__container {
-    padding: 5rem 0;
+    padding: 5rem 0 6rem;
   }
 
   .value-proposition__title {
-    font-size: clamp(2rem, 10vw, 3rem);
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 11vw, 3.75rem);
   }
 
   .value-proposition__description {
@@ -74,13 +158,30 @@
     line-height: 1.65;
   }
 
-  .value-proposition__principles {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 3.5rem;
+  .value-proposition__journey {
+    margin-top: 4rem;
+    padding-right: 3.5rem;
   }
 
-  .value-proposition__principle {
-    padding-top: 1.25rem;
+  .value-proposition__idea {
+    min-height: 12.5rem;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .value-proposition__idea-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .value-proposition__idea-description {
+    font-size: 0.9375rem;
+  }
+
+  .value-proposition-visual {
+    top: 0;
+    right: -1.75rem;
+    bottom: 0;
+    width: 6rem;
   }
 }

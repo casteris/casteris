@@ -5,7 +5,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import "./Header.css";
 
-export default function Header() {
+type HeaderProps = {
+  variant?: "light" | "dark";
+};
+
+export default function Header({ variant = "light" }: HeaderProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,7 +39,7 @@ export default function Header() {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header site-header--${variant}`}>
       <div className="site-header__container">
         <Link
           className="site-header__wordmark"
