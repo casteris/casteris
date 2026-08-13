@@ -71,43 +71,39 @@
 }
 
 .hero-visual__path {
-  fill: none;
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: hero-path-in 900ms ease forwards;
 }
 
-.hero-visual__path--muted {
+.hero-visual__path--delay-1 {
   animation-delay: 180ms;
 }
 
-.hero-visual__path--primary {
+.hero-visual__path--delay-2 {
   animation-delay: 300ms;
 }
 
-.hero-visual__path--secondary {
+.hero-visual__path--delay-3 {
   animation-delay: 520ms;
 }
 
-.hero-visual__path--continuation {
+.hero-visual__path--delay-4 {
   animation-delay: 680ms;
 }
 
 .hero-visual__node {
-  vector-effect: non-scaling-stroke;
   opacity: 0;
   transform-box: fill-box;
   transform-origin: center;
   animation: hero-node-in 300ms ease forwards;
 }
 
-.hero-visual__node--primary {
+.hero-visual__node--primary-delay {
   animation-delay: 650ms;
 }
 
-.hero-visual__node--accent {
+.hero-visual__node--accent-delay {
   animation-delay: 900ms;
 }
 
@@ -180,44 +176,8 @@
   overflow: visible;
 }
 
-.hero-visual__path {
-  fill: none;
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
-}
-
-.hero-visual__path--muted {
-  stroke: var(--color-deep-muted);
-  opacity: 0.22;
-}
-
-.hero-visual__path--primary {
-  stroke: var(--color-primary);
-}
-
-.hero-visual__path--secondary {
-  stroke: var(--color-secondary);
-}
-
 .hero-visual__path--continuation {
-  stroke: var(--color-deep-muted);
   opacity: 0.32;
-}
-
-.hero-visual__node {
-  vector-effect: non-scaling-stroke;
-}
-
-.hero-visual__node--primary {
-  fill: var(--color-deep);
-  stroke: var(--color-primary);
-  stroke-width: 3;
-}
-
-.hero-visual__node--accent {
-  fill: var(--color-accent);
-  stroke: var(--color-deep);
-  stroke-width: 4;
 }
 
 @media (max-width: 64rem) {
