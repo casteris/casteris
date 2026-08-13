@@ -1,18 +1,25 @@
 import "./ValueProposition.css";
+import ValuePropositionVisual from "./ValuePropositionVisual";
 
-const principles = [
+const ideas = [
   {
-    title: "Claridad",
+    number: "01",
+    idea: "Comprender.",
+    principle: "Claridad",
     description:
       "Hacer comprensibles conceptos y decisiones tecnológicas complejas.",
   },
   {
-    title: "Práctica",
+    number: "02",
+    idea: "Construir.",
+    principle: "Práctica",
     description:
       "Convertir conocimiento en soluciones, proyectos y experiencias reales.",
   },
   {
-    title: "Criterio",
+    number: "03",
+    idea: "Liderar.",
+    principle: "Criterio",
     description:
       "Tomar decisiones tecnológicas considerando contexto, impacto y resultados.",
   },
@@ -24,8 +31,12 @@ export default function ValueProposition() {
       className="value-proposition"
       aria-labelledby="value-proposition-title"
     >
+      <ValuePropositionVisual />
+
       <div className="value-proposition__container">
         <div className="value-proposition__introduction">
+          <p className="value-proposition__eyebrow">La idea</p>
+
           <h2
             id="value-proposition-title"
             className="value-proposition__title"
@@ -40,18 +51,30 @@ export default function ValueProposition() {
           </p>
         </div>
 
-        <div className="value-proposition__principles">
-          {principles.map((principle) => (
-            <div className="value-proposition__principle" key={principle.title}>
-              <h3 className="value-proposition__principle-title">
-                {principle.title}
-              </h3>
+        <div className="value-proposition__journey">
+          <div className="value-proposition__ideas">
+            {ideas.map((item) => (
+              <article className="value-proposition__idea" key={item.number}>
+                <span className="value-proposition__number" aria-hidden="true">
+                  {item.number}
+                </span>
 
-              <p className="value-proposition__principle-description">
-                {principle.description}
-              </p>
-            </div>
-          ))}
+                <div>
+                  <h3 className="value-proposition__idea-title">
+                    {item.idea}
+                  </h3>
+
+                  <p className="value-proposition__principle">
+                    {item.principle}
+                  </p>
+
+                  <p className="value-proposition__idea-description">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
