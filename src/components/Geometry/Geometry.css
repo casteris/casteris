@@ -1,0 +1,34 @@
+.geometry-path {
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.geometry-path--muted {
+  stroke: var(--color-deep-muted);
+  opacity: 0.22;
+}
+
+.geometry-path--primary {
+  stroke: var(--color-primary);
+}
+
+.geometry-path--secondary {
+  stroke: var(--color-secondary);
+}
+
+.geometry-node {
+  vector-effect: non-scaling-stroke;
+}
+
+.geometry-node--primary {
+  fill: var(--color-deep);
+  stroke: var(--color-primary);
+  stroke-width: 3;
+}
+
+.geometry-node--accent {
+  fill: var(--color-accent);
+  stroke: var(--color-deep);
+  stroke-width: 4;
+}

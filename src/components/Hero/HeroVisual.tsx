@@ -1,3 +1,7 @@
+import GeometryNode from "../Geometry/GeometryNode";
+import GeometryPath from "../Geometry/GeometryPath";
+import "../Geometry/Geometry.css";
+
 export default function HeroVisual() {
   return (
     <div className="hero-visual" aria-hidden="true">
@@ -6,49 +10,50 @@ export default function HeroVisual() {
         viewBox="0 0 520 620"
         role="presentation"
       >
-        <path
-          pathLength="1"
-          className="hero-visual__path hero-visual__path--muted"
+        <GeometryPath
           d="M70 126H244"
+          tone="muted"
+          className="hero-visual__path hero-visual__path--delay-1"
         />
 
-        <circle
-          className="hero-visual__node hero-visual__node--primary"
-          cx="244"
-          cy="126"
-          r="7"
+        <GeometryNode
+          cx={244}
+          cy={126}
+          variant="primary"
+          className="hero-visual__node hero-visual__node--primary-delay"
         />
 
-        <path
-          pathLength="1"
-          className="hero-visual__path hero-visual__path--primary"
+        <GeometryPath
           d="M244 126V270H364"
+          tone="primary"
+          className="hero-visual__path hero-visual__path--delay-2"
         />
 
-        <circle
-          className="hero-visual__node hero-visual__node--primary"
-          cx="364"
-          cy="270"
-          r="7"
+        <GeometryNode
+          cx={364}
+          cy={270}
+          variant="primary"
+          className="hero-visual__node hero-visual__node--primary-delay"
         />
 
-        <path
-          pathLength="1"
-          className="hero-visual__path hero-visual__path--secondary"
+        <GeometryPath
           d="M364 270V392H438"
+          tone="secondary"
+          className="hero-visual__path hero-visual__path--delay-3"
         />
 
-        <circle
-          className="hero-visual__node hero-visual__node--accent"
-          cx="438"
-          cy="392"
-          r="8"
+        <GeometryNode
+          cx={438}
+          cy={392}
+          radius={8}
+          variant="accent"
+          className="hero-visual__node hero-visual__node--accent-delay"
         />
 
-        <path
-          pathLength="1"
-          className="hero-visual__path hero-visual__path--continuation"
+        <GeometryPath
           d="M438 392V510H382V620"
+          tone="muted"
+          className="hero-visual__path hero-visual__path--continuation hero-visual__path--delay-4"
         />
       </svg>
     </div>
