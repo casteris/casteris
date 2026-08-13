@@ -10,7 +10,7 @@ import ValueProposition from "../components/ValueProposition/ValueProposition";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header variant="dark" />
 
       <main>
         <Hero />

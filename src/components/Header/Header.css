@@ -3,8 +3,19 @@
   top: 0;
   z-index: 100;
   width: 100%;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.site-header--light {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-border);
+}
+
+.site-header--dark {
+  background: var(--color-deep);
+  border-bottom: 1px solid var(--color-deep-border);
 }
 
 .site-header__container {
@@ -18,10 +29,17 @@
 }
 
 .site-header__wordmark {
-  color: var(--color-black);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.025em;
+}
+
+.site-header--light .site-header__wordmark {
+  color: var(--color-black);
+}
+
+.site-header--dark .site-header__wordmark {
+  color: var(--color-white);
 }
 
 .site-header__navigation {
@@ -31,14 +49,25 @@
 }
 
 .site-header__link {
-  color: var(--color-graphite);
   font-size: 0.9375rem;
   font-weight: 500;
   transition: color 160ms ease;
 }
 
+.site-header--light .site-header__link {
+  color: var(--color-graphite);
+}
+
+.site-header--dark .site-header__link {
+  color: var(--color-deep-muted);
+}
+
 .site-header__link:hover {
   color: var(--color-primary);
+}
+
+.site-header--dark .site-header__link:hover {
+  color: var(--color-white);
 }
 
 .site-header__wordmark:focus-visible,
@@ -52,12 +81,19 @@
 .site-header__menu-button {
   display: none;
   padding: 0.5rem;
-  color: var(--color-black);
   background: transparent;
   border: 0;
   cursor: pointer;
   line-height: 1;
   font-size: 1.5rem;
+}
+
+.site-header--light .site-header__menu-button {
+  color: var(--color-black);
+}
+
+.site-header--dark .site-header__menu-button {
+  color: var(--color-white);
 }
 
 @media (max-width: 48rem) {
@@ -82,8 +118,16 @@
     align-items: stretch;
     gap: 0;
     padding: 0.5rem 1rem 1rem;
-    background: var(--color-white);
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header--light .site-header__navigation {
+    background: var(--color-white);
+  }
+
+  .site-header--dark .site-header__navigation {
+    background: var(--color-deep);
+    border-bottom-color: var(--color-deep-border);
   }
 
   .site-header__navigation--open {
@@ -96,6 +140,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-header,
   .site-header__link {
     transition: none;
   }
