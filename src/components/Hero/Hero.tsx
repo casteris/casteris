@@ -7,7 +7,9 @@ export default function Hero() {
       <div className="hero__container">
         <div className="hero__content">
           <h1 id="hero-title" className="hero__title">
-            Comprender. Construir. Liderar.
+            <span>Comprender.</span>
+            <span>Construir.</span>
+            <span>Liderar.</span>
           </h1>
 
           <p className="hero__description">
@@ -18,6 +20,9 @@ export default function Hero() {
 
           <a className="hero__cta" href="#proyectos">
             Explorar proyectos
+            <span className="hero__cta-arrow" aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
 
