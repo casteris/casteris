@@ -1,0 +1,221 @@
+.casteris-path {
+  position: relative;
+  background: var(--color-white);
+  scroll-margin-top: 4.5rem;
+}
+
+.casteris-path__container {
+  width: min(100% - 2rem, 72rem);
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+
+.casteris-path__introduction {
+  max-width: 48rem;
+}
+
+.casteris-path__eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.casteris-path__title {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--color-black);
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.casteris-path__description {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+  color: var(--color-graphite);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.casteris-path__journey {
+  position: relative;
+  margin-top: 7rem;
+}
+
+.casteris-path__stages {
+  position: relative;
+  z-index: 1;
+}
+
+.casteris-path__stage {
+  min-height: 12.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 10rem minmax(0, 1fr);
+  align-items: center;
+}
+
+.casteris-path__stage-content {
+  max-width: 28rem;
+}
+
+.casteris-path__stage--left .casteris-path__stage-content {
+  grid-column: 1;
+  justify-self: end;
+  padding-right: 1rem;
+  text-align: right;
+}
+
+.casteris-path__stage--right .casteris-path__stage-content {
+  grid-column: 3;
+  justify-self: start;
+  padding-left: 1rem;
+}
+
+.casteris-path__stage-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.casteris-path__stage--left .casteris-path__stage-heading {
+  justify-content: flex-end;
+}
+
+.casteris-path__stage--right .casteris-path__stage-heading {
+  justify-content: flex-start;
+}
+
+.casteris-path__number {
+  flex: 0 0 auto;
+  color: var(--color-neutral);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.casteris-path__stage-title {
+  margin: 0;
+  color: var(--color-black);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.casteris-path__stage-description {
+  margin: 1rem 0 0;
+  color: var(--color-graphite);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.casteris-path-visual {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 10rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.casteris-path-visual__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.casteris-path-visual__line {
+  opacity: 0.42;
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .casteris-path__container {
+    padding: 7rem 0;
+  }
+
+  .casteris-path__journey {
+    margin-top: 6rem;
+  }
+
+  .casteris-path__stage {
+    grid-template-columns: minmax(0, 1fr) 4.5rem minmax(0, 1fr);
+  }
+
+  .casteris-path__stage--left .casteris-path__stage-content {
+    padding-right: 0.75rem;
+  }
+
+  .casteris-path__stage--right .casteris-path__stage-content {
+    padding-left: 0.75rem;
+  }
+
+  .casteris-path-visual {
+    width: 4.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .casteris-path {
+    scroll-margin-top: 4rem;
+  }
+
+  .casteris-path__container {
+    padding: 6rem 0;
+  }
+
+  .casteris-path__title {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 11vw, 3.75rem);
+  }
+
+  .casteris-path__description {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .casteris-path__journey {
+    margin-top: 4.5rem;
+  }
+
+  .casteris-path__stage {
+    min-height: 12rem;
+    display: block;
+    padding-left: 3.75rem;
+  }
+
+  .casteris-path__stage-content,
+  .casteris-path__stage--left .casteris-path__stage-content,
+  .casteris-path__stage--right .casteris-path__stage-content {
+    max-width: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .casteris-path__stage-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .casteris-path__stage-description {
+    font-size: 0.9375rem;
+  }
+
+  .casteris-path-visual {
+    left: 0;
+    width: 3.5rem;
+    transform: none;
+  }
+
+  .casteris-path__stage-heading,
+  .casteris-path__stage--left .casteris-path__stage-heading,
+  .casteris-path__stage--right .casteris-path__stage-heading {
+    justify-content: flex-start;
+  }
+}

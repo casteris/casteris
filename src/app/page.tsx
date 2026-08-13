@@ -1,4 +1,4 @@
-import Capabilities from "../components/Capabilities/Capabilities";
+import CasterisPath from "../components/CasterisPath/CasterisPath";
 import Contact from "../components/Contact/Contact";
 import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Footer from "../components/Footer/Footer";
@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <ValueProposition />
-        <Capabilities />
+        <CasterisPath />
         <FeaturedProjects />
         <Founder />
         <Contact />
