@@ -25,7 +25,7 @@ export default function Header({ variant = "light" }: HeaderProps) {
       href: isHomePage ? "#proyectos" : "/proyectos",
     },
     {
-      label: "Fundador",
+      label: "Experiencia",
       href: isHomePage ? "#fundador" : "/#fundador",
     },
     {
