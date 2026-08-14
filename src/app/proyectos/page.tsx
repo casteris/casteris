@@ -48,12 +48,17 @@ export default function ProjectsPage() {
           <div className="projects-page__container">
             <p className="projects-page__eyebrow">Portafolio</p>
 
-            <h1 className="projects-page__title">Proyectos</h1>
+            <div className="projects-page__intro-grid">
+              <h1 className="projects-page__title">
+                Productos construidos desde problemas concretos.
+              </h1>
 
-            <p className="projects-page__description">
-              Productos digitales construidos a partir de problemas concretos,
-              decisiones de diseño y desarrollo iterativo.
-            </p>
+              <p className="projects-page__description">
+                Casteris explora problemas y oportunidades mediante productos
+                digitales que convierten decisiones de diseño y tecnología en
+                soluciones funcionales.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -62,19 +67,42 @@ export default function ProjectsPage() {
           aria-label="Proyectos de Casteris"
         >
           <div className="projects-page__container">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <article
-                className="projects-page__project"
+                className={`projects-page__project ${
+                  index % 2 === 0
+                    ? "projects-page__project--text-first"
+                    : "projects-page__project--visual-first"
+                }`}
                 key={project.name}
               >
                 <p className="projects-page__project-number">
                   {project.number}
                 </p>
 
-                <div className="projects-page__project-content">
-                  <h2 className="projects-page__project-title">
-                    {project.name}
-                  </h2>
+                <div className="projects-page__project-layout">
+                  <div className="projects-page__project-content">
+                    <h2 className="projects-page__project-title">
+                      {project.name}
+                    </h2>
+
+                    <p className="projects-page__project-description">
+                      {project.description}
+                    </p>
+
+                    <p className="projects-page__project-disciplines">
+                      {project.disciplines}
+                    </p>
+
+                    {project.href && (
+                      <Link
+                        className="projects-page__project-link"
+                        href={project.href}
+                      >
+                        Ver proyecto →
+                      </Link>
+                    )}
+                  </div>
 
                   <div className="projects-page__project-visual">
                     <Image
@@ -83,25 +111,9 @@ export default function ProjectsPage() {
                       alt={project.imageAlt}
                       width={1173}
                       height={620}
-                      sizes="(max-width: 48rem) 100vw, 60rem"
+                      sizes="(max-width: 48rem) 100vw, 42rem"
                     />
                   </div>
-
-                  <p className="projects-page__project-description">
-                    {project.description}
-                  </p>
-
-                  <p className="projects-page__project-disciplines">
-                    {project.disciplines}
-                  </p>
-                  {project.href && (
-                    <Link
-                      className="projects-page__project-link"
-                      href={project.href}
-                    >
-                      Ver proyecto →
-                    </Link>
-                  )}
                 </div>
               </article>
             ))}
