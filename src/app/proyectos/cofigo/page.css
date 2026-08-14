@@ -26,25 +26,33 @@
   text-transform: uppercase;
 }
 
+.cofigo-page__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: 6rem;
+  align-items: end;
+  margin-top: 2rem;
+}
+
 .cofigo-page__title {
-  max-width: 58rem;
-  margin: 1.25rem 0 0;
+  max-width: 46rem;
+  margin: 0;
   color: var(--color-black);
-  font-size: clamp(2.75rem, 6vw, 4.75rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
 }
 
 .cofigo-page__lead {
-  max-width: 46rem;
-  margin: 2rem 0 0;
+  max-width: 30rem;
+  margin: 0;
   color: var(--color-graphite);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-  line-height: 1.7;
+  font-size: 1.0625rem;
+  line-height: 1.75;
 }
 
 .cofigo-page__visual {
-  margin-top: 3rem;
+  margin-top: 4.5rem;
   padding: 1.25rem;
   overflow: hidden;
   background: var(--color-surface);
@@ -94,25 +102,241 @@
   line-height: 1.8;
 }
 
-.cofigo-page__capabilities,
+.cofigo-page__progression {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cofigo-page__progression-item {
+  min-height: 10rem;
+  padding: 1.25rem 1.25rem 1.5rem 0;
+}
+
+.cofigo-page__progression-item + .cofigo-page__progression-item {
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.cofigo-page__progression-item span {
+  display: block;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.cofigo-page__progression-item strong {
+  display: block;
+  margin-top: 2rem;
+  color: var(--color-black);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cofigo-page__progression-item p {
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.cofigo-page__solution-sides {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.cofigo-page__solution-side {
+  border-top: 1px solid var(--color-border);
+}
+
+.cofigo-page__solution-side-label {
+  margin: 0;
+  padding: 1.25rem 0;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cofigo-page__solution-side ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cofigo-page__solution-side li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.cofigo-page__solution-side li > span {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.cofigo-page__solution-side li > p {
+  margin: 0;
+  color: var(--color-graphite);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
 .cofigo-page__decisions {
   margin: 2rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-.cofigo-page__capabilities li,
-.cofigo-page__decisions li {
-  padding: 1rem 0;
-  color: var(--color-graphite);
-  font-size: 1rem;
-  line-height: 1.6;
-  border-top: 1px solid var(--color-border);
+.cofigo-page__section--construction {
+  background: var(--color-deep);
+  border-top-color: var(--color-deep-border);
 }
 
-.cofigo-page__capabilities li:last-child,
-.cofigo-page__decisions li:last-child {
-  border-bottom: 1px solid var(--color-border);
+.cofigo-page__section--construction .cofigo-page__section-label {
+  color: var(--color-secondary);
+}
+
+.cofigo-page__section--construction .cofigo-page__section-content h2 {
+  color: var(--color-white);
+}
+
+.cofigo-page__section--construction .cofigo-page__section-content > p {
+  color: var(--color-deep-muted);
+}
+
+.cofigo-page__architecture {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-deep-border);
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.cofigo-page__architecture-layer {
+  min-height: 10rem;
+  padding: 1.5rem 1.5rem 1.75rem 0;
+}
+
+.cofigo-page__architecture-layer + .cofigo-page__architecture-layer {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-deep-border);
+}
+
+.cofigo-page__architecture-layer span {
+  display: block;
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.cofigo-page__architecture-layer p {
+  margin: 2.5rem 0 0;
+  color: var(--color-deep-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.cofigo-page__architecture-layer strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cofigo-page__delivery {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-deep-border);
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.cofigo-page__section--construction .cofigo-page__delivery-label {
+  margin: 0;
+  color: var(--color-deep-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cofigo-page__delivery-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.cofigo-page__section--construction .cofigo-page__technologies {
+  margin-top: 2rem;
+}
+
+.cofigo-page__section--construction .cofigo-page__technologies span {
+  color: var(--color-deep-muted);
+}
+
+.cofigo-page__section--construction .cofigo-page__decisions {
+  margin-top: 3rem;
+}
+
+.cofigo-page__section--construction .cofigo-page__decisions li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-deep-border);
+}
+
+.cofigo-page__section--construction .cofigo-page__decisions li:last-child {
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.cofigo-page__section--construction .cofigo-page__decisions li > span {
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.cofigo-page__section--construction .cofigo-page__decisions li > p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cofigo-page__section--construction .cofigo-page__visual {
+  background: var(--color-deep-surface);
+  border-color: var(--color-deep-border);
 }
 
 .cofigo-page__technologies {
@@ -129,16 +353,23 @@
   line-height: 1.6;
 }
 
-.cofigo-page__return {
-  border-top: 1px solid var(--color-border);
+.cofigo-page__section--state {
+  border-top: 0;
 }
 
-.cofigo-page__return .cofigo-page__container {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+.cofigo-page__section--state .cofigo-page__section-grid {
+  padding-top: 6rem;
+  padding-bottom: 6.5rem;
+}
+
+.cofigo-page__section--state .cofigo-page__section-content h2 {
+  max-width: 38rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .cofigo-page__return-link {
+  display: inline-block;
+  margin-top: 3rem;
   color: var(--color-black);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -174,8 +405,85 @@
     padding: 3.5rem 0;
   }
 
-  .cofigo-page__return .cofigo-page__container {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
+  .cofigo-page__section--state .cofigo-page__section-grid {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .cofigo-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cofigo-page__title {
+    font-size: clamp(2.5rem, 11vw, 3.25rem);
+    line-height: 1;
+  }
+
+  .cofigo-page__lead {
+    max-width: 34rem;
+  }
+
+  .cofigo-page__progression {
+    grid-template-columns: 1fr;
+  }
+
+  .cofigo-page__progression-item {
+    min-height: auto;
+    padding: 1.25rem 0;
+  }
+
+  .cofigo-page__progression-item + .cofigo-page__progression-item {
+    padding-left: 0;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .cofigo-page__progression-item strong {
+    margin-top: 0.75rem;
+  }
+
+  .cofigo-page__solution-sides {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cofigo-page__solution-side-label {
+    padding: 1rem 0;
+  }
+
+  .cofigo-page__architecture {
+    grid-template-columns: 1fr;
+  }
+
+  .cofigo-page__architecture-layer {
+    min-height: auto;
+    padding: 1.25rem 0;
+  }
+
+  .cofigo-page__architecture-layer + .cofigo-page__architecture-layer {
+    padding-left: 0;
+    border-top: 1px solid var(--color-deep-border);
+    border-left: 0;
+  }
+
+  .cofigo-page__architecture-layer p {
+    margin-top: 0.75rem;
+  }
+
+  .cofigo-page__delivery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem 0;
+  }
+
+  .cofigo-page__section--construction .cofigo-page__decisions {
+    margin-top: 2rem;
+  }
+
+  .cofigo-page__section--construction .cofigo-page__decisions li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 1rem;
   }
 }

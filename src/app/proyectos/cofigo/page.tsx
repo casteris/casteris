@@ -44,16 +44,18 @@ export default function CofiGOProjectPage() {
           <div className="cofigo-page__container cofigo-page__hero-content">
             <p className="cofigo-page__eyebrow">CofiGO</p>
 
-            <h1 className="cofigo-page__title">
-              Pedidos universitarios diseñados para reducir espera y simplificar
-              la operación.
-            </h1>
+            <div className="cofigo-page__hero-grid">
+              <h1 className="cofigo-page__title">
+                Pedidos universitarios diseñados para reducir espera y
+                simplificar la operación.
+              </h1>
 
-            <p className="cofigo-page__lead">
-              CofiGO explora cómo conectar estudiantes y cafeterías mediante
-              una experiencia digital que organiza pedidos, tiempos de recojo y
-              operación alrededor de una necesidad cotidiana.
-            </p>
+              <p className="cofigo-page__lead">
+                CofiGO explora cómo conectar estudiantes y cafeterías mediante
+                una experiencia digital que organiza pedidos, tiempos de recojo
+                y operación alrededor de una necesidad cotidiana.
+              </p>
+            </div>
 
             <div className="cofigo-page__visual">
               <Image
@@ -87,7 +89,7 @@ export default function CofiGOProjectPage() {
           </div>
         </section>
 
-        <section className="cofigo-page__section">
+        <section className="cofigo-page__section cofigo-page__section--approach">
           <div className="cofigo-page__container cofigo-page__section-grid">
             <p className="cofigo-page__section-label">El enfoque</p>
 
@@ -100,6 +102,35 @@ export default function CofiGOProjectPage() {
                 Después se incorporaron carrito, pedidos, estados operativos y
                 herramientas administrativas.
               </p>
+
+              <div
+                className="cofigo-page__progression"
+                aria-label="Progresión del recorrido de CofiGO"
+              >
+                <div className="cofigo-page__progression-item">
+                  <span>01</span>
+                  <strong>Descubrir</strong>
+                  <p>Menú y selección</p>
+                </div>
+
+                <div className="cofigo-page__progression-item">
+                  <span>02</span>
+                  <strong>Preparar</strong>
+                  <p>Carrito y recojo</p>
+                </div>
+
+                <div className="cofigo-page__progression-item">
+                  <span>03</span>
+                  <strong>Ordenar</strong>
+                  <p>Creación y seguimiento</p>
+                </div>
+
+                <div className="cofigo-page__progression-item">
+                  <span>04</span>
+                  <strong>Operar</strong>
+                  <p>Gestión y reportes</p>
+                </div>
+              </div>
 
               <p>
                 La evolución se mantuvo enfocada en reducir fricción para el
@@ -117,16 +148,65 @@ export default function CofiGOProjectPage() {
             <div className="cofigo-page__section-content">
               <h2>Una experiencia digital conectada con la operación real.</h2>
 
-              <ul className="cofigo-page__capabilities">
-                {capabilities.map((capability) => (
-                  <li key={capability}>{capability}</li>
-                ))}
-              </ul>
+              <div
+                className="cofigo-page__solution-sides"
+                aria-label="Experiencia y operación de CofiGO"
+              >
+                <article className="cofigo-page__solution-side">
+                  <p className="cofigo-page__solution-side-label">
+                    Experiencia del estudiante
+                  </p>
+
+                  <ol>
+                    <li>
+                      <span>01</span>
+                      <p>{capabilities[0]}</p>
+                    </li>
+                    <li>
+                      <span>02</span>
+                      <p>{capabilities[1]}</p>
+                    </li>
+                    <li>
+                      <span>03</span>
+                      <p>{capabilities[3]}</p>
+                    </li>
+                    <li>
+                      <span>04</span>
+                      <p>{capabilities[4]}</p>
+                    </li>
+                    <li>
+                      <span>05</span>
+                      <p>{capabilities[5]}</p>
+                    </li>
+                  </ol>
+                </article>
+
+                <article className="cofigo-page__solution-side">
+                  <p className="cofigo-page__solution-side-label">
+                    Operación de cafetería
+                  </p>
+
+                  <ol>
+                    <li>
+                      <span>01</span>
+                      <p>{capabilities[2]}</p>
+                    </li>
+                    <li>
+                      <span>02</span>
+                      <p>{capabilities[6]}</p>
+                    </li>
+                    <li>
+                      <span>03</span>
+                      <p>{capabilities[7]}</p>
+                    </li>
+                  </ol>
+                </article>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="cofigo-page__section">
+        <section className="cofigo-page__section cofigo-page__section--construction">
           <div className="cofigo-page__container cofigo-page__section-grid">
             <p className="cofigo-page__section-label">
               Construcción y decisiones
@@ -146,6 +226,39 @@ export default function CofiGOProjectPage() {
               </p>
 
               <div
+                className="cofigo-page__architecture"
+                aria-label="Arquitectura principal de CofiGO"
+              >
+                <div className="cofigo-page__architecture-layer">
+                  <span>01</span>
+                  <p>Experiencia</p>
+                  <strong>React Native + Expo</strong>
+                </div>
+
+                <div className="cofigo-page__architecture-layer">
+                  <span>02</span>
+                  <p>Backend</p>
+                  <strong>Spring Boot</strong>
+                </div>
+
+                <div className="cofigo-page__architecture-layer">
+                  <span>03</span>
+                  <p>Persistencia</p>
+                  <strong>MySQL</strong>
+                </div>
+              </div>
+
+              <div className="cofigo-page__delivery">
+                <p className="cofigo-page__delivery-label">Entrega</p>
+
+                <div className="cofigo-page__delivery-flow">
+                  <span>Vercel</span>
+                  <span aria-hidden="true">+</span>
+                  <span>Railway</span>
+                </div>
+              </div>
+
+              <div
                 className="cofigo-page__technologies"
                 aria-label="Tecnologías principales de CofiGO"
               >
@@ -154,17 +267,32 @@ export default function CofiGOProjectPage() {
                 ))}
               </div>
 
-              <ul className="cofigo-page__decisions">
+              <ol className="cofigo-page__decisions">
                 <li>
-                  Separar la experiencia del estudiante de la operación de la
-                  cafetería.
+                  <span>01</span>
+                  <p>
+                    Separar la experiencia del estudiante de la operación de la
+                    cafetería.
+                  </p>
                 </li>
-                <li>Modelar estados explícitos para el ciclo de cada pedido.</li>
-                <li>Evitar transiciones operativas inconsistentes.</li>
+
                 <li>
-                  Mantener despliegues independientes para frontend y backend.
+                  <span>02</span>
+                  <p>Modelar estados explícitos para el ciclo de cada pedido.</p>
                 </li>
-              </ul>
+
+                <li>
+                  <span>03</span>
+                  <p>Evitar transiciones operativas inconsistentes.</p>
+                </li>
+
+                <li>
+                  <span>04</span>
+                  <p>
+                    Mantener despliegues independientes para frontend y backend.
+                  </p>
+                </li>
+              </ol>
 
               <div className="cofigo-page__visual cofigo-page__visual--section">
                 <Image
@@ -180,7 +308,7 @@ export default function CofiGOProjectPage() {
           </div>
         </section>
 
-        <section className="cofigo-page__section">
+        <section className="cofigo-page__section cofigo-page__section--state">
           <div className="cofigo-page__container cofigo-page__section-grid">
             <p className="cofigo-page__section-label">Estado actual</p>
 
@@ -192,15 +320,11 @@ export default function CofiGOProjectPage() {
                 la creación, seguimiento y gestión operativa de los pedidos,
                 incluyendo capacidades administrativas y reportes básicos.
               </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="cofigo-page__return">
-          <div className="cofigo-page__container">
-            <Link className="cofigo-page__return-link" href="/proyectos">
-              ← Volver a proyectos
-            </Link>
+              <Link className="cofigo-page__return-link" href="/proyectos">
+                ← Volver a proyectos
+              </Link>
+            </div>
           </div>
         </section>
       </main>
