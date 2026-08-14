@@ -26,25 +26,33 @@
   text-transform: uppercase;
 }
 
+.agendoc-page__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: 6rem;
+  align-items: end;
+  margin-top: 2rem;
+}
+
 .agendoc-page__title {
-  max-width: 58rem;
-  margin: 1.25rem 0 0;
+  max-width: 46rem;
+  margin: 0;
   color: var(--color-black);
-  font-size: clamp(2.75rem, 6vw, 4.75rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
 }
 
 .agendoc-page__lead {
-  max-width: 46rem;
-  margin: 2rem 0 0;
+  max-width: 30rem;
+  margin: 0;
   color: var(--color-graphite);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-  line-height: 1.7;
+  font-size: 1.0625rem;
+  line-height: 1.75;
 }
 
 .agendoc-page__hero-visual {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   padding: 1.25rem;
   overflow: hidden;
   background: var(--color-surface);
@@ -89,25 +97,227 @@
   line-height: 1.8;
 }
 
-.agendoc-page__capabilities,
+.agendoc-page__progression {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agendoc-page__progression-item {
+  min-height: 9rem;
+  padding: 1.25rem 1.5rem 1.5rem 0;
+}
+
+.agendoc-page__progression-item + .agendoc-page__progression-item {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.agendoc-page__progression-item span {
+  display: block;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.agendoc-page__progression-item strong {
+  display: block;
+  margin-top: 2.5rem;
+  color: var(--color-black);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.agendoc-page__solution-journeys {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agendoc-page__solution-journey {
+  padding: 1.5rem 1.5rem 2rem 0;
+}
+
+.agendoc-page__solution-journey + .agendoc-page__solution-journey {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.agendoc-page__solution-journey span {
+  display: block;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.agendoc-page__solution-journey h3 {
+  margin: 1.5rem 0 0;
+  color: var(--color-black);
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.agendoc-page__solution-journey ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agendoc-page__solution-journey li {
+  padding: 0.75rem 0;
+  color: var(--color-graphite);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--color-border);
+}
+
+.agendoc-page__solution-journey li:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
 .agendoc-page__decisions {
   margin: 2rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-.agendoc-page__capabilities li,
-.agendoc-page__decisions li {
-  padding: 1rem 0;
-  color: var(--color-graphite);
-  font-size: 1rem;
-  line-height: 1.6;
-  border-top: 1px solid var(--color-border);
+.agendoc-page__section--construction {
+  background: var(--color-deep);
+  border-top-color: var(--color-deep-border);
 }
 
-.agendoc-page__capabilities li:last-child,
-.agendoc-page__decisions li:last-child {
-  border-bottom: 1px solid var(--color-border);
+.agendoc-page__section--construction .agendoc-page__section-label {
+  color: var(--color-secondary);
+}
+
+.agendoc-page__section--construction .agendoc-page__section-content h2 {
+  color: var(--color-white);
+}
+
+.agendoc-page__section--construction .agendoc-page__section-content > p {
+  color: var(--color-deep-muted);
+}
+
+.agendoc-page__architecture {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-deep-border);
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.agendoc-page__architecture-layer {
+  min-height: 10rem;
+  padding: 1.5rem 1.5rem 1.75rem 0;
+}
+
+.agendoc-page__architecture-layer + .agendoc-page__architecture-layer {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-deep-border);
+}
+
+.agendoc-page__architecture-layer span {
+  display: block;
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.agendoc-page__architecture-layer p {
+  margin: 2.5rem 0 0;
+  color: var(--color-deep-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.agendoc-page__architecture-layer strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.agendoc-page__delivery {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-deep-border);
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.agendoc-page__section--construction .agendoc-page__delivery-label {
+  margin: 0;
+  color: var(--color-deep-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.agendoc-page__delivery-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.agendoc-page__section--construction .agendoc-page__technologies {
+  margin-top: 2rem;
+}
+
+.agendoc-page__section--construction .agendoc-page__technologies span {
+  color: var(--color-deep-muted);
+}
+
+.agendoc-page__section--construction .agendoc-page__decisions {
+  margin-top: 3rem;
+}
+
+.agendoc-page__section--construction .agendoc-page__decisions li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-deep-border);
+}
+
+.agendoc-page__section--construction .agendoc-page__decisions li:last-child {
+  border-bottom: 1px solid var(--color-deep-border);
+}
+
+.agendoc-page__section--construction .agendoc-page__decisions li > span {
+  color: var(--color-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.agendoc-page__section--construction .agendoc-page__decisions li > p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .agendoc-page__section-visual {
@@ -139,16 +349,23 @@
   line-height: 1.6;
 }
 
-.agendoc-page__return {
-  border-top: 1px solid var(--color-border);
+.agendoc-page__section--state {
+  border-top: 0;
 }
 
-.agendoc-page__return .agendoc-page__container {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+.agendoc-page__section--state .agendoc-page__section-grid {
+  padding-top: 6rem;
+  padding-bottom: 6.5rem;
+}
+
+.agendoc-page__section--state .agendoc-page__section-content h2 {
+  max-width: 38rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .agendoc-page__return-link {
+  display: inline-block;
+  margin-top: 3rem;
   color: var(--color-black);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -162,6 +379,43 @@
   outline: 3px solid var(--color-primary);
   outline-offset: 4px;
   border-radius: 0.25rem;
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+  .agendoc-page__hero-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(15rem, 0.7fr);
+    gap: 3rem;
+  }
+
+  .agendoc-page__title {
+    font-size: clamp(3rem, 6.5vw, 4rem);
+  }
+
+  .agendoc-page__section-grid {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .agendoc-page__progression-item,
+  .agendoc-page__solution-journey,
+  .agendoc-page__architecture-layer {
+    padding-right: 1rem;
+  }
+
+  .agendoc-page__progression-item + .agendoc-page__progression-item,
+  .agendoc-page__solution-journey + .agendoc-page__solution-journey,
+  .agendoc-page__architecture-layer + .agendoc-page__architecture-layer {
+    padding-left: 1rem;
+  }
+
+  .agendoc-page__solution-journey h3 {
+    font-size: 1.125rem;
+  }
+
+  .agendoc-page__delivery {
+    grid-template-columns: minmax(8rem, 0.6fr) minmax(0, 1.4fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 48rem) {
@@ -185,8 +439,141 @@
     padding: 0.75rem;
   }
 
-  .agendoc-page__return .agendoc-page__container {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
+  .agendoc-page__section--state .agendoc-page__section-grid {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .agendoc-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .agendoc-page__title {
+    font-size: clamp(2.75rem, 12vw, 3.75rem);
+  }
+
+  .agendoc-page__lead {
+    max-width: 34rem;
+  }
+
+  .agendoc-page__progression {
+    grid-template-columns: 1fr;
+  }
+
+  .agendoc-page__progression-item {
+    min-height: auto;
+    padding: 1.25rem 0;
+  }
+
+  .agendoc-page__progression-item + .agendoc-page__progression-item {
+    padding-left: 0;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .agendoc-page__progression-item strong {
+    margin-top: 1rem;
+  }
+
+  .agendoc-page__solution-journeys {
+    grid-template-columns: 1fr;
+  }
+
+  .agendoc-page__solution-journey {
+    padding: 1.5rem 0;
+  }
+
+  .agendoc-page__solution-journey + .agendoc-page__solution-journey {
+    padding-left: 0;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .agendoc-page__architecture {
+    grid-template-columns: 1fr;
+  }
+
+  .agendoc-page__architecture-layer {
+    min-height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .agendoc-page__architecture-layer + .agendoc-page__architecture-layer {
+    padding-left: 0;
+    border-top: 1px solid var(--color-deep-border);
+    border-left: 0;
+  }
+
+  .agendoc-page__architecture-layer p {
+    margin-top: 1rem;
+  }
+
+  .agendoc-page__delivery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .agendoc-page__section--construction .agendoc-page__decisions li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .agendoc-page__title {
+    font-size: clamp(2.5rem, 11vw, 3.25rem);
+    line-height: 1;
+  }
+
+  .agendoc-page__hero {
+    padding: 3.75rem 0 4rem;
+  }
+
+  .agendoc-page__hero-grid {
+    gap: 1.5rem;
+  }
+
+  .agendoc-page__hero-visual {
+    margin-top: 2.5rem;
+  }
+
+  .agendoc-page__progression-item {
+    padding: 1rem 0;
+  }
+
+  .agendoc-page__progression-item strong {
+    margin-top: 0.75rem;
+  }
+
+  .agendoc-page__solution-journey {
+    padding: 1.25rem 0;
+  }
+
+  .agendoc-page__solution-journey h3 {
+    margin-top: 1rem;
+  }
+
+  .agendoc-page__solution-journey ul {
+    margin-top: 1rem;
+  }
+
+  .agendoc-page__architecture-layer {
+    padding: 1.25rem 0;
+  }
+
+  .agendoc-page__architecture-layer p {
+    margin-top: 0.75rem;
+  }
+
+  .agendoc-page__architecture-layer strong {
+    margin-top: 0.375rem;
+  }
+
+  .agendoc-page__delivery {
+    margin-top: 2rem;
+    padding: 1.25rem 0;
+  }
+
+  .agendoc-page__section--construction .agendoc-page__decisions {
+    margin-top: 2rem;
   }
 }
