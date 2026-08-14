@@ -2,21 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 import "./FeaturedProjects.css";
 
-type Project = {
+type ProjectEvidence = {
   number: string;
   name: string;
-  description: string;
+  statement: string;
+  context: string;
+  approach: string;
+  technologies: string[];
+  status: string;
   href: string;
-  image?: string;
-  imageAlt?: string;
+  image: string;
+  imageAlt: string;
 };
 
-const projects: Project[] = [
+const projects: ProjectEvidence[] = [
   {
     number: "01",
     name: "AgenDoc",
-    description:
-      "Plataforma para la gestión de citas médicas que explora la construcción de un producto digital completo, desde la experiencia del paciente hasta la operación médica y administrativa.",
+    statement:
+      "Gestión de citas médicas construida como un producto digital completo.",
+    context: "Gestión de citas médicas",
+    approach:
+      "Evolución incremental alrededor de los recorridos del paciente, el médico y la operación.",
+    technologies: ["React", "Spring Boot", "PostgreSQL"],
+    status: "MVP publicado y operativo.",
     href: "/proyectos/agendoc",
     image: "/projects/agendoc-reception.png",
     imageAlt: "Recepción Digital de AgenDoc para reservar una cita médica",
@@ -24,11 +33,17 @@ const projects: Project[] = [
   {
     number: "02",
     name: "CofiGO",
-    description:
-      "Plataforma de pedidos para cafeterías universitarias orientada a simplificar la compra, reducir tiempos de espera y conectar la experiencia del estudiante con la operación de la cafetería.",
+    statement:
+      "Pedidos universitarios conectados con la operación de la cafetería.",
+    context: "Pedidos en cafeterías universitarias",
+    approach:
+      "Experiencia del estudiante y operación de la cafetería desarrolladas como recorridos conectados.",
+    technologies: ["React Native", "Expo", "Spring Boot", "MySQL"],
+    status: "Implementación funcional full stack.",
     href: "/proyectos/cofigo",
     image: "/projects/cofigo-menu.png",
-    imageAlt: "Menú de CofiGO con catálogo de productos, horarios de recojo y carrito",
+    imageAlt:
+      "Menú de CofiGO con catálogo de productos, horarios de recojo y carrito",
   },
 ];
 
@@ -41,62 +56,104 @@ export default function FeaturedProjects() {
     >
       <div className="featured-projects__container">
         <div className="featured-projects__introduction">
-          <p className="featured-projects__eyebrow">Proyectos destacados</p>
+          <p className="featured-projects__eyebrow">Evidencia</p>
 
           <h2
             id="featured-projects-title"
             className="featured-projects__title"
           >
-            Construir también es una forma de aprender.
+            El criterio se demuestra construyendo.
           </h2>
 
           <p className="featured-projects__description">
-            Proyectos reales utilizados para explorar problemas, tomar
-            decisiones de producto y arquitectura, desarrollar soluciones y
-            convertir conocimiento en experiencia aplicada.
+            AgenDoc y CofiGO muestran cómo problemas concretos pueden
+            convertirse en soluciones funcionales mediante decisiones de
+            producto, tecnología y arquitectura.
           </p>
         </div>
 
-        <div className="featured-projects__grid">
-          {projects.map((project) => (
+        <div className="featured-projects__cases">
+          {projects.map((project, index) => (
             <article
-              className="featured-projects__project"
+              className={`featured-projects__case ${
+                index % 2 === 0
+                  ? "featured-projects__case--default"
+                  : "featured-projects__case--reverse"
+              }`}
               key={project.number}
             >
-              <span
-                className="featured-projects__number"
-                aria-hidden="true"
-              >
-                {project.number}
-              </span>
+              <div className="featured-projects__case-heading">
+                <span
+                  className="featured-projects__number"
+                  aria-hidden="true"
+                >
+                  {project.number}
+                </span>
 
-              <h3 className="featured-projects__project-name">
-                {project.name}
-              </h3>
+                <h3 className="featured-projects__project-name">
+                  {project.name}
+                </h3>
 
-              {project.image && (
-                <div className="featured-projects__visual">
-                  <Image
-                    className="featured-projects__image"
-                    src={project.image}
-                    alt={project.imageAlt ?? ""}
-                    width={1173}
-                    height={620}
-                    sizes="(max-width: 48rem) 100vw, 50vw"
-                  />
+                <p className="featured-projects__statement">
+                  {project.statement}
+                </p>
+              </div>
+
+              <div className="featured-projects__visual">
+                <Image
+                  className="featured-projects__image"
+                  src={project.image}
+                  alt={project.imageAlt}
+                  width={1412}
+                  height={744}
+                  sizes="(max-width: 48rem) calc(100vw - 2rem), 54rem"
+                />
+              </div>
+
+              <div className="featured-projects__evidence">
+                <div className="featured-projects__detail">
+                  <p className="featured-projects__detail-label">Contexto</p>
+                  <p className="featured-projects__detail-value">
+                    {project.context}
+                  </p>
                 </div>
-              )}
 
-              <p className="featured-projects__project-description">
-                {project.description}
-              </p>
+                <div className="featured-projects__detail">
+                  <p className="featured-projects__detail-label">Enfoque</p>
+                  <p className="featured-projects__detail-value">
+                    {project.approach}
+                  </p>
+                </div>
 
-              <Link
-                className="featured-projects__project-link"
-                href={project.href}
-              >
-                Ver proyecto →
-              </Link>
+                <div className="featured-projects__detail">
+                  <p className="featured-projects__detail-label">
+                    Construcción
+                  </p>
+
+                  <div
+                    className="featured-projects__technologies"
+                    aria-label={`Tecnologías principales de ${project.name}`}
+                  >
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>{technology}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="featured-projects__detail">
+                  <p className="featured-projects__detail-label">Estado</p>
+                  <p className="featured-projects__detail-value">
+                    {project.status}
+                  </p>
+                </div>
+
+                <Link
+                  className="featured-projects__project-link"
+                  href={project.href}
+                >
+                  Ver caso →
+                </Link>
+              </div>
             </article>
           ))}
         </div>
